@@ -1,0 +1,44 @@
+{
+  "name": "benchpulse",
+  "version": "1.0.0",
+  "description": "Developer-First HTTP Load Tester, Concurrent Benchmark Engine & Bento Grid Studio with Microsecond Percentile Analytics",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "benchpulse": "dist/bin.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "node /Users/jatinsharma/.local/bin/lib/node_modules/typescript/bin/tsc",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node --test dist/tests/*.test.js",
+    "start": "node dist/bin.js",
+    "studio": "node dist/bin.js studio",
+    "mock": "node dist/bin.js mock"
+  },
+  "keywords": [
+    "benchmark",
+    "http-benchmarks",
+    "load-testing",
+    "latency-percentiles",
+    "p99",
+    "performance",
+    "dev-tools",
+    "bento-grid",
+    "api-testing",
+    "observability"
+  ],
+  "author": "Jatin Sharma <raghavjatin245@gmail.com> (https://jatinsh.netlify.app/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raghav1924/benchpulse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raghav1924/benchpulse/issues"
+  },
+  "homepage": "https://github.com/raghav1924/benchpulse#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
