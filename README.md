@@ -149,14 +149,34 @@ console.log(`Passed SLA: ${result.passedSla}`);
 ```
 benchpulse/
 ├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   │   ├── bug_report.md        # Structured bug report schema
+│   │   └── feature_request.md   # Feature request schema
+│   ├── PULL_REQUEST_TEMPLATE.md # Contribution checklist
 │   └── workflows/
 │       └── ci.yml               # Automated CI test workflow
 ├── docs/
-│   ├── PERCENTILES_AND_HISTOGRAMS.md
-│   ├── CONCURRENCY_TUNING.md
-│   ├── DESIGN_SYSTEM.md
-│   ├── CHEATSHEET.md
-│   └── STUDIO_MANUAL.md
+│   ├── ARCHITECTURE.md          # Subsystem design & component diagrams
+│   ├── API_REFERENCE.md         # Programmatic TypeScript SDK reference
+│   ├── BENCHMARKS.md            # Empirical performance telemetry
+│   ├── CHEATSHEET.md            # CLI parameter cheatsheet
+│   ├── CONCURRENCY_TUNING.md    # Worker pool tuning & socket reuse
+│   ├── DESIGN_SYSTEM.md         # Bento Grid (#12) & Cybercore (#24) specifications
+│   ├── FAQ.md                   # Frequently asked developer questions
+│   ├── LOAD_TESTING_ANTI_PATTERNS.md # Coordinated omission & port starvation guide
+│   ├── PERCENTILE_MATHEMATICS.md# Formal LaTeX percentile formulas
+│   ├── PERCENTILES_AND_HISTOGRAMS.md # Tail latency math & histogram bucketing
+│   ├── ROADMAP.md               # Product milestones (Q1/Q2 2027)
+│   ├── STUDIO_MANUAL.md         # Web Studio (Port 6363) user guide
+│   └── TROUBLESHOOTING.md       # Diagnostic fixes for common errors
+├── examples/
+│   ├── advanced-recipe.js       # Advanced programmatic SDK workflow
+│   ├── basic-benchmark.js       # Basic load test demo
+│   ├── burst-traffic.js         # Multi-stage burst surge testing
+│   ├── custom-headers.js        # Multi-tenant header injection
+│   └── sla-assertion.js         # CI/CD SLA quality gate verification
+├── scripts/
+│   └── healthcheck.js           # Self-contained runtime healthcheck
 ├── src/
 │   ├── core/
 │   │   ├── types.ts             # Benchmark configs, telemetry, & metrics schemas
@@ -172,6 +192,9 @@ benchpulse/
 │   ├── cli.ts                   # CLI arguments parser and dispatchers
 │   ├── index.ts                 # Public module exports
 │   └── bin.ts                   # Executable shebang wrapper
+├── CHANGELOG.md                 # Semantic version release notes
+├── CONTRIBUTING.md              # Contributor workflow & guidelines
+├── SECURITY.md                  # Vulnerability disclosure policy
 ├── PRODUCT_BRIEF.md             # Architecture & specification document
 ├── package.json                 # Zero-dependency package manifest
 ├── tsconfig.json                # TypeScript ES2022 compiler configuration
